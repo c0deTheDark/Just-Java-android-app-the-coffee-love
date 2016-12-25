@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hackpro.vka.justjava.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/coffee"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/qun_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="30sp"
+        android:textColor="#fff" />
+
+
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:onClick="increament"
+        android:paddingTop="25dp"
+        android:text="@string/add"
+        android:layout_below="@+id/qun_txt"
+        android:layout_alignStart="@+id/qun_txt"/>
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="1"
+        android:layout_below="@+id/qun_txt"
+        android:layout_toEndOf="@+id/plus"
+        android:textAlignment="center"
+        android:paddingEnd="10dp"
+        android:textSize="30sp"
+        android:textColor="#fff"/>
+
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:onClick="decreament"
+        android:text="@string/min"
+        android:layout_toEndOf="@+id/quantity"
+        android:layout_below="@+id/qun_txt"/>
+
+    <TextView
+        android:id="@+id/priceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/plus"
+        android:layout_alignStart="@+id/qun_txt"
+        android:textSize="30sp"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:layout_below="@+id/priceTxt"
+        android:layout_alignStart="@+id/qun_txt"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:layout_marginTop="25dp"
+         />
+
+    <TextView
+        android:textSize="30sp"
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="submitOrder"
+        android:text="@string/order"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#aaa"/>
+
+
+
+</RelativeLayout>
